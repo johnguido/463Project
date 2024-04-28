@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}|MediaPrintService\\MediaPrintService.csproj|\\\\mac\\home\\desktop\\school\\2024_spring\\463\\project\\mediaprintservice\\mediaprintservice\\loginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}|MediaPrintService\\MediaPrintService.csproj|\\\\mac\\home\\desktop\\school\\2024_spring\\463\\project\\mediaprintservice\\mediaprintservice\\accountcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}|MediaPrintService\\MediaPrintService.csproj|\\\\mac\\home\\desktop\\school\\2024_spring\\463\\project\\mediaprintservice\\mediaprintservice\\accountcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}|MediaPrintService\\MediaPrintService.csproj|\\\\mac\\home\\desktop\\school\\2024_spring\\463\\project\\mediaprintservice\\mediaprintservice\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountCreation.cs [Design]",
+              "DocumentMoniker": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\MediaPrintService\\AccountCreation.cs",
+              "RelativeDocumentMoniker": "MediaPrintService\\AccountCreation.cs",
+              "ToolTip": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\MediaPrintService\\AccountCreation.cs [Design]",
+              "RelativeToolTip": "MediaPrintService\\AccountCreation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T16:45:37.239Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountCreation.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\MediaPrintService\\AccountCreation.cs",
+              "RelativeDocumentMoniker": "MediaPrintService\\AccountCreation.cs",
+              "ToolTip": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\MediaPrintService\\AccountCreation.cs",
+              "RelativeToolTip": "MediaPrintService\\AccountCreation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T16:45:46.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Database.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\MediaPrintService\\Database.cs",
+              "RelativeDocumentMoniker": "MediaPrintService\\Database.cs",
+              "ToolTip": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\MediaPrintService\\Database.cs",
+              "RelativeToolTip": "MediaPrintService\\Database.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwDwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T16:45:28.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginScreen.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\MediaPrintService\\LoginScreen.cs",
+              "RelativeDocumentMoniker": "MediaPrintService\\LoginScreen.cs",
+              "ToolTip": "\\\\Mac\\Home\\Desktop\\school\\2024_spring\\463\\project\\MediaPrintService\\MediaPrintService\\LoginScreen.cs",
+              "RelativeToolTip": "MediaPrintService\\LoginScreen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T15:39:35.444Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

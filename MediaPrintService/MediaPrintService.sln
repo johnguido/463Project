@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaPrintService", "MediaPrintService\MediaPrintService.csproj", "{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E1EF3E-6DF6-4D5E-83AA-59972CC07FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {211F892D-F36B-4162-9723-3B9FA6B2127C}
+	EndGlobalSection
+EndGlobal
