@@ -10,6 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+/*
+ * CreatePrintTab.cs
+ * John Guido
+ * Allows users to create prints and then add them to their cart
+ * April 27th, 2024
+ */
+
 namespace MediaPrintService
 {
     public partial class CreatePrintTab : UserControl
@@ -17,11 +24,19 @@ namespace MediaPrintService
         public CreatePrintTab()
         {
             InitializeComponent();
+
+            //This initializes the selection to mug sizes
+            //Eventually we would like to hook this part up to the database
+            //We lost a team member midway through the process so had to cut back on goals
+
             comboBox1.SelectedIndex = 0;
             List<string> list = new List<string>() { "1 x 2", "2 x 4", "3 x 6" };
             comboBox2.Items.Clear();
             comboBox2.Items.AddRange(list.ToArray());
             comboBox2.SelectedIndex = 0;
+
+            //This essentially allows the user to create and view an *unlimited* number of prints (Of course this number is not unlimited but unlikely the user will reach the limit)
+            //Should add test case for this
 
             panel2.AutoScroll = false;
             panel2.HorizontalScroll.Enabled = false;
@@ -40,6 +55,8 @@ namespace MediaPrintService
         {
             base.OnVisibleChanged(e);
 
+            //We clear prints everytime we show/reshow this screen
+
             if (Visible)
             {
                 Clear();
@@ -48,6 +65,8 @@ namespace MediaPrintService
 
         public void Clear()
         {
+            //Clears all created prints
+
             panel2.Controls.Clear();
             totalPrints = 0;
             prints.Clear();
@@ -66,6 +85,8 @@ namespace MediaPrintService
 
         private void onMediaTypeSelected(object sender, EventArgs e)
         {
+            //Determines proper sizing for the selected media type
+
             int mediaType = comboBox1.SelectedIndex;
             List<string> list;
 
@@ -96,11 +117,7 @@ namespace MediaPrintService
 
         private void onCreatePrint(object sender, EventArgs e)
         {
-            if (totalPrints == 4)
-            {
-                MessageBox.Show("Only allowed to add four prints at one time");
-                return;
-            }
+            //Determines which print to create on create print button selected
 
             int mediaType = comboBox1.SelectedIndex;
 
@@ -122,6 +139,9 @@ namespace MediaPrintService
 
         private void createMugPrint()
         {
+            //Creates mug prints
+            //This can be refactored in the future and combined with the createPinPrint/ShirtPrint methods
+
             totalPrints++;
 
             Panel panel = new Panel();
@@ -188,6 +208,8 @@ namespace MediaPrintService
 
         private void DetermineMugPriceAndSize(Label price, Label size, Image image)
         {
+            //Determines pricing and size for the created mug print to be displayed
+
             int realIndex = comboBox2.SelectedIndex;
 
             switch (realIndex)
@@ -214,6 +236,9 @@ namespace MediaPrintService
 
         private void createPinPrint()
         {
+            //Creates ping prints
+            //This can be refactored in the future and combined with the createMugPrint/ShirtPrint methods
+
             totalPrints++;
 
             Panel panel = new Panel();
@@ -280,6 +305,8 @@ namespace MediaPrintService
 
         private void DeterminePinPriceAndSize(Label price, Label size, Image image)
         {
+            //Determines the size and pricing of the newly created pin print to be displayed
+
             int realIndex = comboBox2.SelectedIndex;
 
             switch (realIndex)
@@ -306,6 +333,9 @@ namespace MediaPrintService
 
         private void createShirtPrint()
         {
+            //Creates shirt prints
+            //This can be refactored in the future and combined with the createPinPrint/MugPrint methods
+
             totalPrints++;
 
             Panel panel = new Panel();
@@ -372,6 +402,8 @@ namespace MediaPrintService
 
         private void DetermineShirtPriceAndSize(Label price, Label size, Image image)
         {
+            //Determiens size and pricing for newly created shirt print
+
             int sizeIndex = comboBox2.SelectedIndex;
 
             switch (sizeIndex)
@@ -398,6 +430,10 @@ namespace MediaPrintService
 
         private void onAddPrintsToCart(object sender, EventArgs e)
         {
+            //Lets CartTab.cs know it needs to reload its cart 
+            //Sends the created prints to the CartTab.cs to be loaded on show
+            //Clear all created prints on add to prevent duplicates
+
             CartTab.LoadCart = true;
             CartTab.Prints.AddRange(prints);
             Clear();
@@ -405,11 +441,16 @@ namespace MediaPrintService
 
         private void onClearPrints(object sender, EventArgs e)
         {
+            //Clears all created prints
+
             Clear();
         }
 
         private void onUploadImage(object sender, EventArgs e)
         {
+            //Allows user to select an image for printing
+            //Stores image location for later reference when creating actual print
+
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Title = "Select Image";
             fileDialog.InitialDirectory = "C:\\Windows\\Images";
@@ -426,6 +467,8 @@ namespace MediaPrintService
         public string size;
         public string mediaType;
         public Image image;
+
+        //Allows print data to be stored and sent to other classes
 
         public Print(string size, string price, string mediaType, Image image)
         {

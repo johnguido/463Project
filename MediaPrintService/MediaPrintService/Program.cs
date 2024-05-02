@@ -1,5 +1,7 @@
 namespace MediaPrintService
 {
+    //Winforms creates this file itself
+
     internal static class Program
     {
         /// <summary>

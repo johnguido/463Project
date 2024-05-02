@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            accountCreation = new AccountCreation();
             button2 = new Button();
             label4 = new Label();
             button1 = new Button();
@@ -37,7 +38,6 @@
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label1 = new Label();
-            accountCreation = new AccountCreation();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,6 +58,13 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(284, 349);
             panel1.TabIndex = 0;
+            // 
+            // accountCreation
+            // 
+            accountCreation.Location = new Point(0, 0);
+            accountCreation.Name = "accountCreation";
+            accountCreation.Size = new Size(284, 349);
+            accountCreation.TabIndex = 1;
             // 
             // button2
             // 
@@ -149,13 +156,6 @@
             label1.Text = "Member Login";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // accountCreation
-            // 
-            accountCreation.Location = new Point(0, 0);
-            accountCreation.Name = "accountCreation";
-            accountCreation.Size = new Size(284, 349);
-            accountCreation.TabIndex = 1;
-            // 
             // LoginScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -164,7 +164,6 @@
             ClientSize = new Size(579, 476);
             Controls.Add(panel1);
             Name = "LoginScreen";
-            Text = "LoginScreen";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

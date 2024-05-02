@@ -11,6 +11,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
+/*
+ * CartTab.cs
+ * John Guido
+ * Allows users to view the total cost of their prints before checking out and placing an order
+ * April 27th, 2024
+ */
+
 namespace MediaPrintService
 {
     public partial class CartTab : UserControl
@@ -19,6 +26,9 @@ namespace MediaPrintService
         {
             InitializeComponent();
 
+            //Here we set panel2 certain values that essentially allow for infinite prints to be displayed
+            //Horizontal scrolls bars will be present on overflow of prints
+
             panel2.AutoScroll = false;
             panel2.HorizontalScroll.Enabled = false;
             panel2.HorizontalScroll.Visible = false;
@@ -26,11 +36,14 @@ namespace MediaPrintService
             panel2.AutoScroll = true;
         }
 
-        public static bool LoadCart = false;
-        public static List<Print> Prints = new List<Print>();
+        public static bool LoadCart = false; //This lets the cart screen know if it needs to fill the cart with prints received from CreatePrintTab.cs
+        public static List<Print> Prints = new List<Print>(); //These are the prints received from the CreatePrintTab.cs
 
         protected override void OnVisibleChanged(EventArgs e)
         {
+            //This detects when we hide and show the cart tab
+            //When showing the cart tab we will likely need to fill the cart with received prints 
+
             base.OnVisibleChanged(e);
 
             if (Visible && LoadCart)
@@ -41,6 +54,10 @@ namespace MediaPrintService
 
         public void FillCart()
         {
+            //We loop through each received print tallying the total price
+            //We also create a sub panel for each print using the prints data
+            //We then add each sub panel as children to panel2
+
             int index = 0;
             float subTotal = 0;
             float taxes = 0;
@@ -83,7 +100,7 @@ namespace MediaPrintService
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Location = new Point(325, 3);
                 pictureBox.Parent = panel;
-                pictureBox.BackColor = Color.DarkSlateBlue;
+                //pictureBox.BackColor = Color.DarkSlateBlue;
                 pictureBox.Size = new Size(59, 56);
                 pictureBox.Image = print.image;
 

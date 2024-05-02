@@ -156,9 +156,9 @@
             label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold | FontStyle.Italic);
             label2.Location = new Point(723, 9);
             label2.Name = "label2";
-            label2.Size = new Size(100, 19);
+            label2.Size = new Size(105, 19);
             label2.TabIndex = 0;
-            label2.Text = "grant.schuster";
+            label2.Text = "garret.schuster";
             // 
             // createPrintTab
             // 
@@ -221,7 +221,6 @@
             ForeColor = SystemColors.Control;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
-            Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

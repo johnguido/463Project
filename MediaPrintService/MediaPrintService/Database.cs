@@ -5,10 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * Database.cs
+ * John Guido
+ * Allows system to easily talk to Database and statically provides methods for other classes to easily call
+ * April 24th, 2024
+ */
+
 namespace MediaPrintService
 {
     internal class Database
     {
+        //All class variables are just information pertaining to the systems database
+
         private static MySqlConnection? connection = null;
 
         private static string server = "sql5.freesqldatabase.com";
@@ -18,6 +27,10 @@ namespace MediaPrintService
 
         public static User? getUser(string email, string pass)
         {
+            //LoginScreen.cs calls this when trying to login a user
+            //Returns a new user if we were able to find one in the database with the given email / pass
+            //Returns null otherwise
+
             try
             {
                 connection = new MySqlConnection();
@@ -46,6 +59,10 @@ namespace MediaPrintService
 
         public static bool createUser(string email, string name, string user, string pass, string pin)
         {
+            //AccountCreation.cs calls this method
+            //We return true if we were able to successfully create the account with the given information
+            //Return false otherwise
+
             List<string> namePart = name.Split(' ').ToList();
 
             try
@@ -66,8 +83,6 @@ namespace MediaPrintService
                     //first middle last
                     query = "INSERT INTO User (Email, PaymentCardID, FirstName, Minit, LastName, Password, Pin, StreetOne, StreetTwo, City, State, Zipcode) VALUES ('" + email + "', NULL, '" + namePart[0] + "', '" + namePart[1] + "', '" + namePart[2] + "', '" + pass + "', '" + pin + "', NULL, NULL, NULL, NULL, NULL)";
                 }
-
-                MessageBox.Show(query);
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
